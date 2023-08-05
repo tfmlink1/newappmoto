@@ -1,12 +1,13 @@
+/// <reference types="@capacitor/push-notifications" />
+
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'newwnostro',
-  webDir: 'www',
-  server: {
-    androidScheme: 'https'
-  }
+  plugins: {
+    PushNotifications: {
+      presentationOptions: ["badge", "sound", "alert"],
+    },
+  },
 };
 
 export default config;
